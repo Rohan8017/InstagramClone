@@ -1,38 +1,389 @@
-.App {
-  text-align: center;
+/* log in start here */
+.login-page{
+    display: flex; 
+    justify-content: center; 
+    margin: 30px 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.imgwrapper{
+    background-image: url('./images/instagram.png');
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 440px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right-section{
+    width: 360px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-section{
+    width: 300px;
+    padding: 20px 30px 10px 30px;
+    border: 1px solid grey;
 }
-
-.App-link {
-  color: #61dafb;
+.instagram-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.instagram-logo img{
+    width: 200px;
+}
+.login-page-input{
+    /* width: 100%; */
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.login-page-input label{
+    font-size: 11px;
+}
+.login-page-input input{
+    width: 95%;
+    border: none;
+    outline: none;
+    /* padding: 10px 0; */
+    text-indent: 10px;
+}
+.login-page-input input::placeholder{
+    font-size: 12px;
+}
+.log-in-button{
+    width: 100%;
+    color: aliceblue;
+    background: #77A7FF;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    padding: 7px 0;
+}
+.or-button p{
+    font-size: 14px;
+    text-align: center;
+}
+.left-hr{
+    width:120px ;
+    position: absolute;
+}
+.right-hr{
+    width: 120px;
+    position: relative;
+    left: 90px;
+    top: -23px;
+}
+.log-in-with-facebook{
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+.log-in-with-facebook div{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.forgot-password{
+    font-size: 12px;
+    height: 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redirect-sign-up{
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    margin-top: 20px;
+}
+.redirect-sign-up span{
+ color: blue;
+}
+.download-options{
+    display: flex;
+    width: 360px;
+    justify-content: space-evenly;
+}
+.download-options-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+    padding: 10px;
+    background: #000;
+    border-radius: 10px;
+}
+.text .small-text{
+    font-size: 11px;
+    color: white;
+}
+.text .big-text{
+    color: white;
+    font-size: 15px;
+}
+.get-app-para{
+    text-align: center;
+}
+.image-slider{
+    position: relative;
+    height: 540px;
+    width: 248px;
+    left: 142px;
+    top: 24px;
+}
+/* login end here */
+/* signup start here */
+.Signup-section{
+    width: 360px;
+    /* border: 1px solid rgba(128, 128, 128, 0.451); */
+    margin: 10px auto;
+    /* padding: 20px; */
+}
+.inner-section{
+    width: 300px;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid rgba(197, 188, 188, 0.43);
+}
+.inner-section .instagram-logo1{
+    display: flex;
+    justify-content: center;
+}
+.inner-section .instagram-logo1 img{
+    margin-top: 20px;
+    width: 200px;
+}
+.log-in-with-facebook-signup{
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background:rgb(14, 128, 235);
+    border-radius: 10px;
+    color: white;
+}
+.learn-more,.terms-condition{
+    font-size: 14px;
+}
+.Sign-up-button{
+    width: 100%;
+    padding: 7px 0;
+    border: none;
+    border-radius: 10px;
+    background: #77A7FF;
+    color: white;
+    font-size: 16px;
+}
+.redirect-to-login{
+    border: 1px solid rgba(197, 188, 188, 0.43);
+    width: 360px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+/* signup end here */
+/* left sidebar start here */
+.instagram-logo-sidebar{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.instagram-logo-sidebar img{
+    width: 110px;
+}
+.padding20px{
+    padding: 20px;
+}
+.left-sidebar{
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    border-right: 1px solid rgb(209, 205, 205);
+}
+.left-sidebar-buttons{
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.left-sidebar-buttons:hover{
+    background: rgba(220, 215, 215, 0.134);
+}
+.left-sidebar-button{
+    margin-left: 10px;
+}
+.left-sidebar-more{
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+.more-dropdown ul li{
+    list-style: none;
+    padding: 10px;
+    width: 200px;
+    background: rgba(222, 218, 218, 0.186);
+}
+.more-dropdown ul li:hover{
+    background: rgba(203, 197, 197, 0.441);
+}
+.more-dropdown{
+    position: absolute;
+    bottom: 40px;
+    left: -30px;
+}
+/* video-upload */
+.upload-video{
+    position: absolute;
+    border: 1px solid rgb(210, 201, 201);
+    width: 450px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    z-index: 2;
+}
+.upload-video-header{
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(210, 201, 201);
+}
+.upload-video-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+.upload-video-button{
+    padding: 7px 25px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(38, 108, 237);
+    font-size: 16px;
+    color: white;
+}
+/* #image-input{
+    display: none;
+} */
+.error-msg{
+    color: red;
+}
+/* reels-start-here */
+.reels{
+    width: calc(100vw - 250px);
+    position: absolute;
+    left: 250px;
+    top: 0;
+}
+.reels-video video{
+    height: 100%;
+    /* width: 100%; */
+    width: 91%;
+    /* margin-left: 100px; */
+}
+.reels-videos{
+    /* width: 420px; */
+    width: 450px;
+    height: 100vh;
+    margin: 0 auto;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.reels-videos::-webkit-scrollbar{
+    display: none;
+    height: 0;
+    width: 0;
+}
+.reels-video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align:start;
+}
+.single-post{
+    object-fit: fill;
+    z-index: 10;
+}
+.right-propbar{
+    width: 9%;
+    position: absolute;
+    right:0;
+    bottom: 0;
+    height: 50vh;
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.upload-comments{
+    position: fixed;
+    border: 1px solid rgb(210, 201, 201);
+    width: 620px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    z-index: 100;
+}
+.upload-comments-header .upload-comments-header-span1{
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(210, 201, 201);
+}
+.upload-comments-header-span2{
+    /* text-align: right; */
+    font-size: 26px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+.show-comments{
+    padding:0 20px;
+    height: 330px;
+    overflow-y: scroll;
+}
+.input-comments{
+    /* padding: 10px 0; */
+    margin:20px;
+    /* width: 100%; */
+    border: 1px solid rgba(182, 176, 176, 0.619);
+    /* border-radius: 20px; */
+}
+.input-comments-img{
+    width: 30px;
+    /* padding: 10px 5px; */
+}
+.input-comments textarea{
+    border: none;
+    outline: none;
+    width: 450px;
+    height: 20px;
+}
+/* .input-comments button{
+    padding: 5px 10px;
+} */
+.profile-image{
+    width: 40px;
+    height: 40px;
+}
+.comment{
+    display: flex;
+}
+.comment-image-div{
+    width: 50px;
+    height: 40px;
+}
+.comments-name-text p{
+    margin: 0;
+}
+.comments-name{
+    font-weight: bold;
 }
