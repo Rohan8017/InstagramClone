@@ -29,7 +29,7 @@ export default class App extends Component {
           displayName: name, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'
           }).then(() => {
             localStorage.setItem('user', JSON.stringify(user));
-            window.location.href = ('/');
+            // window.location.href = ('/');
           // console.log(user);
           // }).catch((error) => {
           //   // An error occurred
