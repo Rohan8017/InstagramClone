@@ -33,10 +33,10 @@ export default class App extends Component {
           // ...
           localStorage.setItem('user', JSON.stringify(user));
           // console.log(user);
-        }).catch((error) => {
-          // An error occurred
-          // ...
-          console.log(error);
+        // }).catch((error) => {
+        //   // An error occurred
+        //   // ...
+        //   console.log(error);
         });
       })
   }
@@ -48,10 +48,10 @@ export default class App extends Component {
         localStorage.setItem('user', JSON.stringify(user));
         // window.location.href = ('/');
       })
-      .catch((err) => {
-        const errorCode = err.code;
-        console.log(errorCode);
-      })
+      // .catch((err) => {
+      //   const errorCode = err.code;
+      //   console.log(errorCode);
+      // })
   }
   logOut = () => {
     signOut(auth).then(() => {

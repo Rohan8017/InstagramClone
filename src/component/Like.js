@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { updateDoc, doc } from 'firebase/firestore';
-import { fstore,database } from './Firebase';
+import { fstore} from './Firebase';
 
 export default class Like extends Component {
     constructor(props){
@@ -25,7 +25,7 @@ export default class Like extends Component {
     // }
     handleClick=()=>{
         if(this.state.like === true) {
-            let tempArr = this.props.postData.likes.filter((el) => el != this.props.userData.uid);
+            let tempArr = this.props.postData.likes.filter((el) => el !== this.props.userData.uid)
             let tempRef = doc(fstore, "posts", this.props.id);
             updateDoc(tempRef, {likes: tempArr}).then((res) => {
                 // console.log(res);
@@ -41,8 +41,8 @@ export default class Like extends Component {
             updateDoc(tempRef, {likes: tempArr}).then((res) => {
                 // console.log(res);
                 this.setState({like: true});
-            }).catch((err) => {
-                console.log(err);
+            // }).catch((err) => {
+            //     console.log(err);
             })
             const count=this.state.likeCount+1;
             this.setState({likeCount:count});

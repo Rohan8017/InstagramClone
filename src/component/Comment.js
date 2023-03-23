@@ -41,7 +41,7 @@ export default class Comment extends Component {
               return (
                 <div className='comment' key={this.props.userData.uid}>
                   <div className='comment-image-div'>
-                    <img className='profile-image' src={ele.uProfile} />
+                    <img className='profile-image' src={ele.uProfile} alt="profile-img"/>
                   </div>
                   <div className='comments-name-text'>
                   <p className='comments-name'>{ele.uName}</p><p>{ele.text}</p>
@@ -52,7 +52,7 @@ export default class Comment extends Component {
           }
         </div>
         <div className='input-comments'>
-          <img className='input-comments-img' src='https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg' />
+          <img className='input-comments-img' alt='profile-img' src='https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg' />
           <textarea placeholder='add a comment' onChange={(e)=>this.setState({comment:e.target.value})} value={this.state.comment}/>
           <button onClick={this.handleClick}>post</button>
         </div>
