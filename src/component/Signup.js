@@ -34,7 +34,7 @@ export default class Signup extends Component {
                     </div>
                     <div className='signup-page-email login-page-input'>
                         <label>{ }</label>
-                        <input type='text' placeholder='Phone number or email' onChange={(e)=> this.setState({email:e.target.value})} />
+                        <input type='email' placeholder='Phone number or email' onChange={(e)=> this.setState({email:e.target.value})} />
                     </div>
                     <div className='signup-page-fullname login-page-input'>
                         <label>{ }</label>

@@ -27,17 +27,15 @@ export default class App extends Component {
         // console.log(user);
         updateProfile(user, {
           displayName: name, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'
-          // }).then(() => {
-          // Profile updated!
-          // ...
+          }).then(() => {
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.href = ('/');
           // console.log(user);
           // }).catch((error) => {
           //   // An error occurred
           //   // ...
           //   console.log(error);
         });
-        localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = ('/');
       })
   }
   logIn = (email, password) => {

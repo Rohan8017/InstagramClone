@@ -72,7 +72,6 @@ export default class VideoUpload extends Component {
           this.setState({ loading: false });
         }).catch((err) => {
           console.log(err);
-          console.log("error");
         })
       })
     }

@@ -7,12 +7,13 @@ import {getFirestore,collection} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC9J5nitN7usEA66czueJgFTGX7K1CeOjM",
-  authDomain: "instagram-reels-e46ec.firebaseapp.com",
-  projectId: "instagram-reels-e46ec",
-  storageBucket: "instagram-reels-e46ec.appspot.com",
-  messagingSenderId: "739270975859",
-  appId: "1:739270975859:web:341f819377bb4cdc1a2506"
+  apiKey: "AIzaSyASx0cK4KHoPn-RkjjQS6WbCV13mDJk9wM",
+  authDomain: "reels-e153f.firebaseapp.com",
+  projectId: "reels-e153f",
+  storageBucket: "reels-e153f.appspot.com",
+  messagingSenderId: "169895035531",
+  appId: "1:169895035531:web:a67fb08c5e30c7e3a5ca8e",
+  measurementId: "G-3QNWD7MTTF"
 };
 
 // Initialize Firebase

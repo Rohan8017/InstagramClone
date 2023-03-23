@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component } from 'react';
 import { database } from './Firebase';
 import { getDocs } from 'firebase/firestore';
 import Like from './Like';
@@ -35,8 +35,8 @@ export default class Reels extends Component {
         getDocs(database.posts).then((res) => {
             this.setState({ posts: res.docs })
             // console.log(res.docs)
-        // }).catch((err) => {
-        //     console.log(err);
+        }).catch((err) => {
+            console.log(err);
         })
         const tempUser = JSON.parse(localStorage.getItem("user"));
         this.setState({ user: tempUser });
@@ -56,10 +56,10 @@ export default class Reels extends Component {
                 <div className='reels-videos'>
                     {this.state.posts.map((item) => {
                         const data = item.data();
-                        // console.log(data);
+                        console.log(data);
                         return (
                             <div key={item.id} className='reels-video'>
-                                <video  controls onClick={this.handleClick} src={data.uUrl} id={data.pId} className="single-post"></video>
+                                <video controls onClick={this.handleClick} src={data.uUrl} id={data.pId} className="single-post"></video>
                                 <div className='right-propbar'>
                                     <Like userData={this.state.user} postData={data} id={item.id} />
                                     <div>
