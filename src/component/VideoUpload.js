@@ -49,7 +49,7 @@ export default class VideoUpload extends Component {
       //error
       this.setState({ errmsg: error });
       setTimeout(() => {
-        this.setState({ errmsg: '' })
+        this.setState({ errmsg: ''})
       }, 5000)
     }
     const f3 = () => {
@@ -66,12 +66,12 @@ export default class VideoUpload extends Component {
           uProfileImage:this.state.user.photoURL,
           createdAt: Date.now(),
         }
-        addDoc(database.posts, obj).then((refernce) => {
-          console.log("Posts updated success");
-          console.log(refernce);
+        addDoc(database.posts, obj).then(() => {
+          // console.log("Posts updated success");
+          // console.log(refernce);
           this.setState({ loading: false });
-        }).catch((err) => {
-          console.log(err);
+        // }).catch((err) => {
+        //   console.log(err);
         })
       })
     }
