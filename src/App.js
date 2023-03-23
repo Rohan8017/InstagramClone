@@ -21,23 +21,23 @@ export default class App extends Component {
     }
   }
   signUp = (email, password, name) => {
-    return createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         // console.log(user);
-        window.location.href=('/');
         updateProfile(user, {
           displayName: name, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'
-        }).then(() => {
+          // }).then(() => {
           // Profile updated!
           // ...
-          localStorage.setItem('user', JSON.stringify(user));
           // console.log(user);
-        // }).catch((error) => {
-        //   // An error occurred
-        //   // ...
-        //   console.log(error);
+          // }).catch((error) => {
+          //   // An error occurred
+          //   // ...
+          //   console.log(error);
         });
+        localStorage.setItem('user', JSON.stringify(user));
+        window.location.href = ('/');
       })
   }
   logIn = (email, password) => {
@@ -48,10 +48,10 @@ export default class App extends Component {
         localStorage.setItem('user', JSON.stringify(user));
         window.location.href = ('/');
       })
-      // .catch((err) => {
-      //   const errorCode = err.code;
-      //   console.log(errorCode);
-      // })
+    // .catch((err) => {
+    //   const errorCode = err.code;
+    //   console.log(errorCode);
+    // })
   }
   logOut = () => {
     signOut(auth).then(() => {
