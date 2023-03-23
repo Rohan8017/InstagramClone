@@ -29,6 +29,7 @@ export default class App extends Component {
           displayName: name, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'
           }).then(() => {
             localStorage.setItem('user', JSON.stringify(user));
+            this.setState({user:user});
             // window.location.href = ('/');
           // console.log(user);
           // }).catch((error) => {
@@ -44,7 +45,8 @@ export default class App extends Component {
         const user = userCredential.user;
         // console.log(user);
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = ('/');
+        this.setState({user:user});
+        // window.location.href = ('/');
       })
     // .catch((err) => {
     //   const errorCode = err.code;
@@ -66,10 +68,16 @@ export default class App extends Component {
         // The signed-in user info.
         const user = result.user;
         localStorage.setItem('user', JSON.stringify(user));
-        window.location.href = ('/');
+        this.setState({user:user});
+        // window.location.href = ('/');
         // IdP data available using getAdditionalUserInfo(result)
         // ...
       })
+  }
+  componentDidUpdate(){
+    if(Object.keys(this.state.user).length !== 0){
+      window.location.href="/";
+    }
   }
   render() {
     return (

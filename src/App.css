@@ -230,6 +230,7 @@
     background: rgba(203, 197, 197, 0.441);
 }
 .more-dropdown{
+    background: white;
     position: absolute;
     bottom: 40px;
     left: -30px;
