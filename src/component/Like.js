@@ -28,7 +28,7 @@ export default class Like extends Component {
             let tempArr = this.props.postData.likes.filter((el) => el != this.props.userData.uid);
             let tempRef = doc(fstore, "posts", this.props.id);
             updateDoc(tempRef, {likes: tempArr}).then((res) => {
-                console.log(res);
+                // console.log(res);
                 this.setState({like: false});
             }).catch((err) => {
                 console.log(err);

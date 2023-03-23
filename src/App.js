@@ -21,10 +21,10 @@ export default class App extends Component {
     }
   }
   signUp = (email, password, name) => {
-    return createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
         // window.location.href=('/');
         updateProfile(user, {
           displayName: name, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'
@@ -32,7 +32,7 @@ export default class App extends Component {
           // Profile updated!
           // ...
           localStorage.setItem('user', JSON.stringify(user));
-          console.log(user);
+          // console.log(user);
         }).catch((error) => {
           // An error occurred
           // ...
@@ -44,7 +44,7 @@ export default class App extends Component {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
         localStorage.setItem('user', JSON.stringify(user));
         // window.location.href = ('/');
       })

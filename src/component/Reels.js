@@ -34,13 +34,13 @@ export default class Reels extends Component {
     componentDidMount() {
         const subArr = getDocs(database.posts).then((res) => {
             this.setState({ posts: res.docs })
-            console.log(res.docs)
+            // console.log(res.docs)
         }).catch((err) => {
             console.log(err);
         })
         const tempUser = JSON.parse(localStorage.getItem("user"));
         this.setState({ user: tempUser });
-        console.log(tempUser)
+        // console.log(tempUser)
     }
     showCommentsModal = (id) => {
         this.setState({ showCommentsModal: true });
@@ -56,7 +56,7 @@ export default class Reels extends Component {
                 <div className='reels-videos'>
                     {this.state.posts.map((item) => {
                         const data = item.data();
-                        console.log(data);
+                        // console.log(data);
                         return (
                             <div key={item.id} className='reels-video'>
                                 <video ref={this.videoRef} controls onClick={this.handleClick} src={data.uUrl} id={data.pId} className="single-post"></video>

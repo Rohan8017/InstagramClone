@@ -23,7 +23,7 @@ export default class Comment extends Component {
     this.setState({showComment:tempArr})
     let tempRef = doc(fstore, "posts", this.props.id);
     updateDoc(tempRef, { comments: tempArr }).then((res) => {
-      console.log(res);
+      // console.log(res);
     }).catch((err) => {
       console.log(err);
     })
