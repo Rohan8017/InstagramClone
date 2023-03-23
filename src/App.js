@@ -21,11 +21,11 @@ export default class App extends Component {
     }
   }
   signUp = (email, password, name) => {
-    createUserWithEmailAndPassword(auth, email, password)
+    return createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         // console.log(user);
-        // window.location.href=('/');
+        window.location.href=('/');
         updateProfile(user, {
           displayName: name, photoURL: 'https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'
         }).then(() => {
@@ -46,7 +46,7 @@ export default class App extends Component {
         const user = userCredential.user;
         // console.log(user);
         localStorage.setItem('user', JSON.stringify(user));
-        // window.location.href = ('/');
+        window.location.href = ('/');
       })
       // .catch((err) => {
       //   const errorCode = err.code;
